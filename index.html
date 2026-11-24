@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1769e0">
+  <meta name="description" content="MADA SOCIAL — restez connectés.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>MADA SOCIAL</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">M</span><span>MADA <b>SOCIAL</b></span></a>
+    <label class="search"><span>⌕</span><input id="searchInput" placeholder="Rechercher sur MADA SOCIAL"></label>
+    <nav class="topnav" aria-label="Navigation principale">
+      <button class="nav-btn active" data-tab="home" title="Accueil">⌂</button>
+      <button class="nav-btn" data-tab="friends" title="Amis">♧</button>
+      <button class="nav-btn" data-tab="videos" title="Vidéos">▷</button>
+      <button class="nav-btn" data-tab="groups" title="Groupes">♙</button>
+    </nav>
+    <div class="top-actions"><button class="round" id="newPostTop" title="Créer">＋</button><button class="round" title="Messages">✉</button><button class="round" title="Notifications">♧</button><button class="avatar small">M</button></div>
+  </header>
+
+  <div class="mobile-tabs">
+    <button class="active" data-tab="home">⌂<small>Accueil</small></button>
+    <button data-tab="friends">♧<small>Amis</small></button>
+    <button data-tab="videos">▷<small>Vidéos</small></button>
+    <button data-tab="groups">♙<small>Groupes</small></button>
+    <button data-tab="profile">☻<small>Profil</small></button>
+  </div>
+
+  <main class="layout">
+    <aside class="left-sidebar">
+      <div class="profile-short"><div class="avatar">M</div><div><b id="sideName">Bienvenue !</b><small>Sur MADA SOCIAL</small></div></div>
+      <button class="side-link active" data-tab="home"><span>⌂</span> Fil d’actualité</button>
+      <button class="side-link" data-tab="friends"><span>♧</span> Amis</button>
+      <button class="side-link" data-tab="messages"><span>✉</span> Messages</button>
+      <button class="side-link" data-tab="videos"><span>▷</span> Vidéos</button>
+      <button class="side-link" data-tab="groups"><span>♙</span> Groupes</button>
+      <button class="side-link" data-tab="pages"><span>▣</span> Pages</button>
+      <div class="sidebar-line"></div><p class="muted side-heading">RACCOURCIS</p>
+      <div class="shortcut"><span class="shortcut-icon">🌺</span> Madagascar</div>
+      <div class="shortcut"><span class="shortcut-icon">🎮</span> Communauté gaming</div>
+      <div class="shortcut"><span class="shortcut-icon">🎵</span> Musique malagasy</div>
+      <div class="sidebar-foot">Confidentialité · Conditions · À propos</div>
+    </aside>
+
+    <section class="feed-column">
+      <div class="stories">
+        <div class="story create-story"><div class="story-photo own">＋</div><b>Créer une story</b></div>
+        <div class="story"><div class="story-photo s1"><span>🌴</span></div><b>Madagascar</b></div>
+        <div class="story"><div class="story-photo s2"><span>🎧</span></div><b>Musique</b></div>
+        <div class="story"><div class="story-photo s3"><span>⚽</span></div><b>Sports</b></div>
+        <div class="story"><div class="story-photo s4"><span>🎮</span></div><b>Gaming</b></div>
+      </div>
+
+      <section class="composer card" id="composer">
+        <div class="composer-top"><div class="avatar">M</div><button class="composer-prompt" id="openComposer">Quoi de neuf ? Partagez une publication...</button></div>
+        <div class="composer-actions"><button id="photoBtn">▧ <span>Photo / vidéo</span></button><button id="feelingBtn">☺ <span>Humeur / activité</span></button><button id="publishBtn" class="publish">Publier</button></div>
+        <div class="composer-expanded hidden" id="composerExpanded">
+          <textarea id="postText" placeholder="Exprimez-vous..."></textarea>
+          <input id="imageUrl" type="url" placeholder="Lien d'une image (facultatif)">
+          <div class="composer-bottom"><span class="muted">Votre publication sera visible dans le fil.</span><button class="primary" id="submitPost">Publier maintenant</button></div>
+        </div>
+      </section>
+
+      <div class="feed-heading"><h2>Fil d’actualité</h2><button class="filter-btn">Pour vous⌄</button></div>
+      <div id="feed">
+        <article class="post card">
+          <div class="post-head"><div class="avatar gradient">M</div><div class="post-author"><b>MADA SOCIAL</b><small>Bienvenue dans votre communauté · À l’instant</small></div><button class="dots">•••</button></div>
+          <p>Bienvenue sur <b>MADA SOCIAL</b> ! 🌺 Partagez vos moments, découvrez les actualités et restez proches de votre communauté.</p>
+          <div class="welcome-art"><div class="welcome-circle">M</div><strong>MIARAHABA TONGA</strong><span>La communauté malagasy connectée</span></div>
+          <div class="post-stats"><span>👍 ❤️ 24 réactions</span><span>8 commentaires</span></div>
+          <div class="post-actions"><button class="like-btn">♡ J’aime</button><button>▢ Commenter</button><button>↗ Partager</button></div>
+        </article>
+        <div class="empty-state hidden" id="emptyState">Aucune publication pour le moment. Soyez le premier à publier !</div>
+      </div>
+    </section>
+
+    <aside class="right-sidebar">
+      <div class="right-block"><div class="right-title"><b>Contacts</b><button class="dots">•••</button></div>
+        <div class="contact"><div class="avatar c1">A</div><b>Amis de Madagascar</b><i></i></div>
+        <div class="contact"><div class="avatar c2">L</div><b>La communauté</b><i></i></div>
+        <div class="contact"><div class="avatar c3">S</div><b>Social Malagasy</b><i></i></div>
+      </div>
+      <div class="right-block birthdays"><b>🌟 À découvrir</b><p>Retrouvez vos amis et découvrez de nouvelles communautés sur MADA SOCIAL.</p></div>
+      <div class="right-footer">MADA SOCIAL © 2026<br>Un réseau pour tous les Malagasy.</div>
+    </aside>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
